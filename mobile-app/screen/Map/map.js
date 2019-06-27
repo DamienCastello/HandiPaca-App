@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import MapView from 'react-native-maps';
-
+import FooterMap from '../../Components/footerMap'
 
 
 const datas = require('../../Files/Data.json');
-
-
-
-
-
-
 
 
 export default class MapHandi extends Component {
@@ -25,7 +19,7 @@ export default class MapHandi extends Component {
         
         return (
             <View style={{flex:1}}>
-                <MapView style={{flex: 1}}
+                <MapView style={{flex: 11}}
                 initialRegion={{
                     latitude: 43.697555,
                     longitude:  7.255962,
@@ -52,6 +46,7 @@ export default class MapHandi extends Component {
                   })
                 }
                  </MapView>
+                 <FooterMap/>
             </View>
         )
     }
