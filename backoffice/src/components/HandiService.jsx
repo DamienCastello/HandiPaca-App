@@ -12,16 +12,12 @@ export class HandiService {
 
 
     async getJson() {
-     return await data;
+     return await data
    
   }
 
 
-  async getAssociation() {
-    return async data;
-  
- }
-
+ 
  getAddress (id) {
   return this.http.get("http://opendata.nicecotedazur.org/data/storage/f/2014-06-06T12%3A26%3A02.912Z/sign-ig-ig-base-localisation.json")
   .map(res => res.json());
@@ -50,14 +46,11 @@ export class HandiService {
  }
 
 
-
-
-
-    getMaraudes() {
+   getAdmin() {
         return  axios
-        .get('http://localhost:3000/maraudes', {headers: {Authorization: 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2huLWRvZUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE1NTkyMzY2Mjh9.6jcK8-WPUqcpmdwnf3nbTAhmYWeNddEeYJeIoQyF9rs'}
-      })
-    .then(res => res.data.maraudes);
+        .get('https://opendata.paris.fr/api/datasets/1.0/search/?q=handicap&rows=100'
+      )
+    .then(res => res.data);
      }
 
      getParticipants() {

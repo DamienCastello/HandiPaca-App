@@ -23,7 +23,7 @@ export default class Correspondant extends Component {
 
 
   componentDidMount() {
-    this.handiservice.getUsers().then(data => this.setState({ users: data }));
+    this.handiservice.getAdmin().then(data => this.setState({ users: data.datasets}));
 
   }
 
@@ -66,12 +66,12 @@ export default class Correspondant extends Component {
                     <p>Fiche Update coiffeur, Lien vers Particpants, </p>
 
                     <DataTable value={this.state.users}>
-                      <Column field="id" header="Nom Prenom" />
-                      <Column field="firstName" header="Administration" />
+                      <Column field="metas.publisher" header="Nom Prenom" />
+                      <Column field="metas.theme" header="Administration" />
                    
-                      <Column field="email" header="mail" />
+                      <Column field="metas.keyword" header="mail" />
                       
-                      <Column field="suivi" header="ville" />
+                      <Column field="metas.description" header="ville" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
                     </DataTable>
