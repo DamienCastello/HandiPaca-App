@@ -6,6 +6,7 @@ import stackConfig from './stackConfig';
 import MapHandi from '../screen/Map/map'
 import Acceuil from '../screen/Accueil/accueil'
 import AboutUs from '../screen/AboutUs/aboutus'
+import Description from '../screen/Description/description'
 // Screens
 
 
@@ -14,7 +15,8 @@ const AppStack = createStackNavigator(
   {
     MapHandi:{screen:MapHandi},
     Acceuil :{screen: Acceuil},
-    AboutUs:{screen: AboutUs}
+    AboutUs:{screen: AboutUs},
+    Description:{screen: Description}
     
     
   },
@@ -27,8 +29,8 @@ const AuthStack = createStackNavigator(
   {
     MapHandi:{screen:MapHandi},
     Acceuil :{screen: Acceuil},
-    AboutUs:{screen: AboutUs}
-    
+    AboutUs:{screen: AboutUs},
+    Description:{screen: Description}
   },
   {
     initialRouteName: 'Acceuil',
