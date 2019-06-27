@@ -1,0 +1,26 @@
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var placesRouter = require('./routes/handicapPlaces');
+var exemplesRouter = require('./routes/exemples');
+var facilitiesRouter = require('./routes/facilities');
+
+var app = express();
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/api/v1/places', placesRouter);
+app.use('/api/v1/exemples', exemplesRouter);
+app.use('/api/v1/facilities', facilitiesRouter);
+
+module.exports = app;
