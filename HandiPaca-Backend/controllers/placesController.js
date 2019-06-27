@@ -1,36 +1,36 @@
 const models = require('../models');
-const Facility = models.Facility;
+const Place = models.Place;
 
 module.exports = {
     index: function (req, res, next) {
-        Facility.findAll()
-            .then((facilities) => { res.json({ facilities }); })
+        Place.findAll()
+            .then((places) => { res.json({ places }); })
             .catch((error) => { console.log(error); });
     },
     show: function (req, res, next) {
-        Facility.findByPk(req.params.id)
-            .then((facility) => { res.json({ facility }); })
+        Place.findByPk(req.params.id)
+            .then((place) => { res.json({ place }); })
             .catch((error) => { console.log(error); });
     },
     create: function (req, res, next) {
-        Facility.create({ ...req.body })
-            .then((facility) => { res.json({ facility }); })
+        Place.create({ ...req.body })
+            .then((place) => { res.json({ place }); })
             .catch((error) => { console.log(error); });
     },
     update: function (req, res, next) {
-        Facility.findByPk(req.params.id)
-            .then((facility) => {
-                facility.update({ ...req.body })
-                    .then((facility) => { res.json({ facility }); })
+        Place.findByPk(req.params.id)
+            .then((place) => {
+                place.update({ ...req.body })
+                    .then((place) => { res.json({ place }); })
                     .catch((error) => { console.log(error); });
             })
             .catch((error) => { console.log(error); });
     },
     delete: function (req, res, next) {
-        Facility.findByPk(req.params.id)
-            .then((facility) => {
-                facility.destroy()
-                    .then((facility) => { res.json({ facility }); })
+        Place.findByPk(req.params.id)
+            .then((place) => {
+                place.destroy()
+                    .then((place) => { res.json({ place }); })
                     .catch((error) => { console.log(error); });
             })
             .catch((error) => { console.log(error); });
