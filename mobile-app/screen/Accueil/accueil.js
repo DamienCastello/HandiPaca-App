@@ -6,9 +6,7 @@ export default class accueil extends Component {
         return (
             <View >
                 <View>
-                this.state.fontLoaded ? (
                  <Text style={{   fontFamily: 'Comfortaa',textAlign: 'center', marginTop: 40, fontSize: 40 }}> HandiPaca </Text>
-                      ) : null
 
                 </View>
                 <TouchableOpacity>

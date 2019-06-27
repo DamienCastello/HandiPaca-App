@@ -21,7 +21,7 @@ export default class App extends React.Component {
 
     await Font.loadAsync({
 
-      'Comfortaa': require('./assets/fonts/Abeganshi.ttf'),
+      'Comfortaa': require('./assets/fonts/Comfortaa.ttf'),
       ...Ionicons.font,
 
     });
@@ -29,11 +29,19 @@ export default class App extends React.Component {
   };
 
   render() {
+    if (!this.state.loading) {
+      return null;//todo create component loading ==>       return <AppLoading />
+    }   
     return (
-      <View style={styles.container}>
-        <StackNavigator />
-      </View>
-    )
+        <View style={styles.container}>
+          <StackNavigator />
+        </View>
+      )
+    // return (
+    //   <View style={styles.container}>
+    //     <StackNavigator />
+    //   </View>
+    // )
 
   }
 
