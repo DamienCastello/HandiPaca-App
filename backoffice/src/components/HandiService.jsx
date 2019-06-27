@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+const data = require('../json/data.json');
 export class HandiService {
     
     getUsers() {
@@ -8,6 +8,17 @@ export class HandiService {
       })
     .then(res => res.data.users);
     }
+
+
+
+
+    async getJson() {
+     return await data;
+    
+  }
+
+
+
 
     getMaraudes() {
         return  axios
