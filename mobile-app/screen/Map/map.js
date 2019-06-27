@@ -17,6 +17,9 @@ export default class MapHandi extends Component {
     componentDidMount() {
         console.log(datas)
     }
+    static navigationOptions = {
+        title: ""
+    }
     
     render() {
         
@@ -24,10 +27,10 @@ export default class MapHandi extends Component {
             <View style={{flex:1}}>
                 <MapView style={{flex: 1}}
                 initialRegion={{
-                    latitude: 43.700000,
-                    longitude: 7.250000,
-                    latitudeDelta: 0.0002,
-                    longitudeDelta: 0.4001
+                    latitude: 43.697555,
+                    longitude:  7.255962,
+                    latitudeDelta: 0.005,
+                    longitudeDelta: 0.005,
                   }}
                 >
                 {
