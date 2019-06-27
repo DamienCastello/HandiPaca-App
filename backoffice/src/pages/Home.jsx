@@ -14,9 +14,7 @@ export default class Home extends Component {
 
       <React.Fragment>
  <NavPanel />
-     
-
-      </React.Fragment>
+         </React.Fragment>
 
     );
   }

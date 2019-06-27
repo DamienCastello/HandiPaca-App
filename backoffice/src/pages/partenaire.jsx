@@ -4,17 +4,15 @@ import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Fieldset } from 'primereact/fieldset';
-
 import { HandiService } from '../components/HandiService';
 import {InputSwitch} from 'primereact/inputswitch';
 import {
   Link
 } from 'react-router-dom';
-import { NewParking } from '../components/contents/parking/NewParking';
 
 
 
-export default class Correspondant extends Component {
+export default class Partenaire extends Component {
   constructor() {
     super();
     this.state = {
@@ -23,9 +21,13 @@ export default class Correspondant extends Component {
     this.handiservice = new HandiService();
   }
 
-
   componentDidMount() {
-    this.handiservice.getJson().then(datas => this.setState({ users: datas.docs }));
+    this.handiservice.getd().then(
+      (data) => {
+        console.log('okkrrrrrrrrrrrrkkkkkkkkkkkkkkk'.data)
+        this.setState({ users: data })
+console.log('okkkkkkkkkkkkkkkkkkkkkkk'.data)
+      });
 
   }
 
@@ -49,30 +51,31 @@ export default class Correspondant extends Component {
 
     return (
 
-  
+
 
       <React.Fragment>
 
           <div className="content-section introduction">
             <div className="feature-intro">
-              <h1>Places pour handicapés ayants droit : Comment créer ses zones de stationnement ?</h1>
-              <p>La largeur minimale de la place de stationnement doit être de 3,3m. Nouveau L'arrêté du 20 avril 2017 impose une longueur minimale de 5m. La pente devra être inférieure à 2% La place devra respecter un espace horizontal au dévers près, inférieur ou égal à 2%</p>
+              <h1>Les Coiffeurs</h1>
+              <p>Mise en place d'un texte de présentation...</p>
             </div>
           </div>
 
           <div className="content-section implementation">
             <TabView>
-              <TabPanel header="liste des places existantes">
+              <TabPanel header="Derniers Inscrits">
                 <div>
                   <Fieldset legend="En cours">
                     <p>Fiche Update coiffeur, Lien vers Particpants, </p>
 
                     <DataTable value={this.state.users}>
-                    <Column field="NUM" header="N° " />
-                      <Column field="NOM_VOIE" header="Adresse " />
+                      <Column field="IDENT_NCA" header="Nom Prenom" />
+                      <Column field="firstName" header="Administration" />
                    
-                      <Column field="NB_PLACE" header="Nbre Place" />
-                      <Column field="CONFORMITE" header="Conformité" />
+                      <Column field="email" header="mail" />
+                      
+                      <Column field="suivi" header="ville" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
                     </DataTable>
@@ -82,18 +85,23 @@ export default class Correspondant extends Component {
               </TabPanel>
 
 
-              <TabPanel header="Ajouter un emplacement GIG-GIC">
+              <TabPanel header="attente de validation">
                 <div>
-                  <Fieldset legend="Ajouter">
-<NewParking />
+                  <Fieldset legend="En cours">
                   </Fieldset>
                 </div>
               </TabPanel>
 
-              <TabPanel header="Modifier emplacement GIG-GIC">
+              <TabPanel header="Coiffeurs bannis">
                 <div>
-                  <Fieldset legend="Ajouter">
-<NewParking />
+                  <Fieldset legend="En cours">
+                  </Fieldset>
+                </div>
+              </TabPanel>
+              <TabPanel header="Ajouter">
+                <div>
+                  <Fieldset legend="En cours">
+ 
                   </Fieldset>
                 </div>
               </TabPanel>
@@ -102,7 +110,8 @@ export default class Correspondant extends Component {
 
             </TabView>
           </div>
-          </React.Fragment>
+
+ </React.Fragment>
     );
   }
 }

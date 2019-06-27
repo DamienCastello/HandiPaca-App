@@ -66,10 +66,11 @@ export default class Correspondant extends Component {
                     <p>Fiche Update coiffeur, Lien vers Particpants, </p>
 
                     <DataTable value={this.state.users}>
-                      <Column field="id" header="Nom" />
-                      <Column field="firstName" header="Prenom" />
+                      <Column field="id" header="Nom Prenom" />
+                      <Column field="firstName" header="Administration" />
                    
                       <Column field="email" header="mail" />
+                      
                       <Column field="suivi" header="ville" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>

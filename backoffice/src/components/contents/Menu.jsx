@@ -11,20 +11,36 @@ import {Menu} from 'primereact/menu';
                     label: 'GENERAL',
                     items: [{label: 'Home', icon: 'pi pi-fw pi-home', url: './'},
                     {label: 'Signalement', icon: 'pi pi-fw pi-calendar', url: './signalement'},
-                      {label: 'PlacesParking', icon: 'pi pi-fw pi-user', url: './place'},
-                      {label:'Correspondant',icon:'pi pi-fw pi-users',url: './correspondant'}
-                
+               
                 ]
                 }, 
-
                 {
-                    label: 'Partenaire??',
+                    label: 'Categories',
                     items: [
                       
-                        {label:'Association',icon:'pi pi-fw pi-filter'},
-                        {label:'Membres',icon:'pi pi-fw pi-filter'},
-                    
+                        {label: 'Place Handicapé', icon: 'pi pi-fw pi-user', url: './place'},
+                        {label: 'ERP', icon: 'pi pi-fw pi-user', url: './'},
+                        {label: 'Transport', icon: 'pi pi-fw pi-user', url: './'},
+                        {label: 'Intineraire', icon: 'pi pi-fw pi-user', url: './'},
+                                         
                     ]
+                },
+
+                {
+                    label: 'Partenaire',
+                    items: [
+                        {label:'Association',icon:'pi pi-fw pi-filter',url: './partenaire'},
+                        {label:'Administration',icon:'pi pi-fw pi-user',url: './correspondant'},
+                        {label:'Membres',icon:'pi pi-fw pi-filter'},
+                            ]
+                },
+         
+                {
+                    label: 'Autres',
+                    items: [{label: 'Pharmancies Numero UTILE', icon: 'pi pi-fw pi-cog',url: './configuration' },
+                            {label: 'Article de lois', icon: 'pi pi-fw pi-power-off', url: './index.html'},
+                            {label: 'Actualites', icon: 'pi pi-fw pi-power-off', url: './index.html'},
+                        ]
                 },
 
                 {
@@ -36,19 +52,6 @@ import {Menu} from 'primereact/menu';
                     label: 'Account',
                     items: [{label: 'Configuration', icon: 'pi pi-fw pi-cog',url: './configuration' },
                             {label: 'Sign Out', icon: 'pi pi-fw pi-power-off', url: './index.html'} ]
-                },
-                {
-                    label: 'Autres',
-                    items: [{label: 'Pharmancies Numero UTILE', icon: 'pi pi-fw pi-cog',url: './configuration' },
-                            {label: 'Trottoir', icon: 'pi pi-fw pi-power-off', url: './index.html'},
-                            {label: 'Canicule', icon: 'pi pi-fw pi-power-off', url: './index.html'}
-
-                        
-                        
-                        
-                        
-                        
-                        ]
                 }
             ]
         };

@@ -61,7 +61,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
 
           <div className="content-section implementation">
             <TabView>
-              <TabPanel header="liste des places existantes">
+              <TabPanel header="liste des emplacements Signalés">
                 <div>
                   <Fieldset legend="En cours">
                     <p> </p>
@@ -70,7 +70,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
                     <Column field="NUM" header="N° " />
                       <Column field="NOM_VOIE" header="Adresse " />
                    
-                      <Column field="NB_PLACE" header="Nbre Place" />
+                      <Column field="NB_PLACE" header="Thematique" />
                       <Column field="CONFORMITE" header="Conformité" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
@@ -89,7 +89,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
               </TabPanel>
 
 
-              <TabPanel header="Demande > 6 mois nsignalement">
+              <TabPanel header="signalement > 6 mois">
                 <div>
                   <Fieldset legend="En cours">
             
@@ -97,7 +97,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
                 </div>
               </TabPanel>
       
-              <TabPanel header="Demande Refusée news coifff">
+              <TabPanel header="Demande Refusée">
                 <div>
                 <Fieldset legend="En cours">
                  </Fieldset>

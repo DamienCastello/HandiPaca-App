@@ -6,6 +6,7 @@ import Ficheconfig from '../pages/configuration';
 import Signalement from '../pages/signalement';
 import Place from '../pages/place';
 import Correspondant from '../pages/correspondant';
+import Partenaire from '../pages/partenaire';
 
 
 export default class Routeur extends Component {
@@ -22,6 +23,7 @@ export default class Routeur extends Component {
         <Route  exact path='/signalement' component={Signalement} />
         <Route  exact path='/place' component={Place} />
         <Route exact path='/correspondant' component={Correspondant} />
+        <Route exact path='/partenaire' component={Partenaire} />
 
         <Route  exact path='/api' component={Api} />
         <Route  exact path='/configuration' component={Ficheconfig} />
