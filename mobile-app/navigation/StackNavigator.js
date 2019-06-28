@@ -39,7 +39,7 @@ const AuthStack = createStackNavigator(
 
   },
   {
-    initialRouteName: 'FormAmenagement',
+    initialRouteName: 'FormPlaces',
     ...stackConfig
   }
 );
