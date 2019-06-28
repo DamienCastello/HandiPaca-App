@@ -5,8 +5,7 @@ export class HandiService {
     
     getPlaces() {
         return  axios
-        .get('http://localhost:3000/'}
-      })
+        .get('http://localhost:3000/')
     .then(res => res.data.users);
     }
 
