@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Menu} from 'primereact/menu';
 
-
+import logo from './marseillee.png';
 
 
 
@@ -98,11 +98,16 @@ import {Menu} from 'primereact/menu';
 
                     {label:'Utilisateurs',icon:'pi pi-fw pi-user'},
 
+
+
+
+
                             {label: 'Sign Out', icon: 'pi pi-fw pi-sign-out'} ]
 
                 }
 
             ]
+
 
         };
 
@@ -124,11 +129,11 @@ import {Menu} from 'primereact/menu';
 
                 <div className="layout-menu">
 
-                
+<img src={logo} alt="Logo" />
 
                     <Menu model={this.state.items}/>
 
-
+               
 
                     
 
