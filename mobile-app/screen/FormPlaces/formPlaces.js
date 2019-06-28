@@ -11,6 +11,10 @@ export default class FormPlaces extends Component {
             selected: ""
         };
     }
+    static navigationOptions = {
+        title: "",
+        headerLeft: null
+    }
     onValueChange(value: string ) {
         this.setState({
             selected: value
@@ -60,7 +64,11 @@ export default class FormPlaces extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <TouchableOpacity style={{...style.buttonAdd,backgroundColor:'#9DC2F8', width: '75%', alignSelf:'center', paddingTop: 20, borderWidth: 1,
+                    <TouchableOpacity onPress={() => {
+                                           
+                                           this.props.navigation.navigate('MapHandi')
+                                       }}
+                    style={{...style.buttonAdd,backgroundColor:'#9DC2F8', width: '75%', alignSelf:'center', paddingTop: 20, borderWidth: 1,
             borderColor: 'black',
             borderStyle: 'solid',}}>
                         <Text style={{alignSelf:'center', marginBottom:20, fontFamily:'Comfortaa',borderRadius:50}} >

@@ -16,6 +16,10 @@ export default class FormAmenagement extends Component {
             selected: value
         });
     }
+    static navigationOptions = {
+        title: "",
+        headerLeft: null
+    }
     render() {
     return (
             <Container>
@@ -69,7 +73,11 @@ export default class FormAmenagement extends Component {
     }}
       /> 
                     </View>
-                    <TouchableOpacity style={{...style.buttonAdd,backgroundColor:'#9DC2F8', width: '75%', alignSelf:'center', paddingTop: 20, borderWidth: 1,
+                    <TouchableOpacity onPress={() => {
+                                           
+                                           this.props.navigation.navigate('MapHandi')
+                                       }}
+                    style={{...style.buttonAdd,backgroundColor:'#9DC2F8', width: '75%', alignSelf:'center', paddingTop: 20, borderWidth: 1,
             borderColor: 'black',
             borderStyle: 'solid',}}>
                         <Text style={{alignSelf:'center', marginBottom:20, fontFamily:'Comfortaa',borderRadius:50}} >
