@@ -43,19 +43,19 @@ export default class StackedLabelExample extends Component {
                                 <Picker.Item label="Hébergement" value="key3" />
                             </Picker>
                         </View>
-                        <Item floatingLabel last>
+                        <Item floatingLabel >
                             <Label>Numéro de voie</Label>
                             <Input />
                         </Item>
-                        <Item floatingLabel last>
+                        <Item floatingLabel >
                             <Label>Rue</Label>
                             <Input />
                         </Item>
-                        <Item floatingLabel last>
+                        <Item floatingLabel >
                             <Label>Ville</Label>
                             <Input />
                         </Item>
-                        <Item floatingLabel last>
+                        <Item floatingLabel >
                             <Label>Code postal</Label>
                             <Input />
                         </Item>
