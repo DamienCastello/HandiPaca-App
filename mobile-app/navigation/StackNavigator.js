@@ -4,29 +4,36 @@ import { createSwitchNavigator, createStackNavigator, createAppContainer } from 
 // Used to display custom header on each screens
 import stackConfig from './stackConfig';
 import MapHandi from '../screen/Map/map'
-import accueil from '../screen/Accueil/accueil'
+import Acceuil from '../screen/Accueil/accueil'
+import AboutUs from '../screen/AboutUs/aboutus'
+import Description from '../screen/Description/description'
 // Screens
 
 
 
 const AppStack = createStackNavigator(
   {
-    MapHandi:{screen:MapHandi}
-    
+    MapHandi:{screen:MapHandi},
+    Acceuil :{screen: Acceuil},
+    AboutUs:{screen: AboutUs},
+    Description:{screen: Description}
     
     
   },
   {
-    initialRouteName: 'MapHandi',
+    initialRouteName: 'Acceuil',
     ...stackConfig
   }
 );
 const AuthStack = createStackNavigator(
   {
-    MapHandi:{screen:MapHandi}
+    MapHandi:{screen:MapHandi},
+    Acceuil :{screen: Acceuil},
+    AboutUs:{screen: AboutUs},
+    Description:{screen: Description}
   },
   {
-    initialRouteName: 'MapHandi',
+    initialRouteName: 'Acceuil',
     ...stackConfig
   }
 );
