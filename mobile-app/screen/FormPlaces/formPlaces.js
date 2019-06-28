@@ -37,7 +37,7 @@ export default class FormPlaces extends Component {
                                 iosIcon={<Icon name="ios-arrow-dropdown" size={25} style={{marginRight: 20}} />}
                                 headerStyle={{ backgroundColor: "#9DC2F8"}}
                                 headerBackButtonTextStyle={{ color: "#fff" }}
-                                headerTitleStyle={{ color: "#fff" }}
+                                headerTitleStyle={{  }}
                                 selectedValue={this.state.selected}
                                 onValueChange={this.onValueChange.bind(this)}
                                 >
