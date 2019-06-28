@@ -21,7 +21,7 @@ const AppStack = createStackNavigator(
     
   },
   {
-    initialRouteName: 'Acceuil',
+    initialRouteName: 'MapHandi',
     ...stackConfig
   }
 );
@@ -33,7 +33,7 @@ const AuthStack = createStackNavigator(
     Description:{screen: Description}
   },
   {
-    initialRouteName: 'Acceuil',
+    initialRouteName: 'MapHandi',
     ...stackConfig
   }
 );
