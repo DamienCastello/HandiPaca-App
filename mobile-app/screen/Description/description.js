@@ -7,7 +7,7 @@ export default class aboutus extends Component {
         return (
             <ScrollView>
                 <View>
-                    <Text style={{ fontFamily: 'Comfortaa', textAlign: 'center', marginTop: 40, fontSize: 40 }}>Description</Text>
+                    <Text style={{ fontFamily: 'Comfortaa', textAlign: 'center', marginTop: 40, fontSize: 40 }}>A propos</Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
                         <Image style={{ resizeMode: 'contain', height: 100, width: 100, marginTop: 55 }} source={require('../../assets/Ping.png')} />
                     </View>
