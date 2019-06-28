@@ -34,13 +34,16 @@ module.exports = {
         references: {
           model: 'Examples',
           foreignKey: 'id'
-        }
+}
       },
       validate: {
         type: Sequelize.BOOLEAN
       },
       archive: {
         type: Sequelize.BOOLEAN
+      },
+      userEmail: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

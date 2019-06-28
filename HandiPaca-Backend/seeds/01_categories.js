@@ -2,19 +2,25 @@ const models = require('../models');
 const Category = models.Category;
 
 Category.create({
-    categoryName: 'ramp'
+    categoryName: 'Places de parking pour handicapés'
 })
 .then((category) => { console.log(category); })
 .catch((error) => { console.log(error); });
 
 Category.create({
-    categoryName: 'elevator'
+    categoryName: 'Restauration'
 })
 .then((category) => { console.log(category); })
 .catch((error) => { console.log(error); });
 
 Category.create({
-    categoryName: 'parking'
+    categoryName: 'Acces aux transports publics'
+})
+.then((category) => { console.log(category); })
+.catch((error) => { console.log(error); });
+
+Category.create({
+    categoryName: 'Hebergement'
 })
 .then((category) => { console.log(category); })
 .catch((error) => { console.log(error); });

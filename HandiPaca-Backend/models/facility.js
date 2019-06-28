@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     other: DataTypes.STRING,
     exampleId: DataTypes.INTEGER,
     validate: DataTypes.BOOLEAN,
-    archive: DataTypes.BOOLEAN
+    archive: DataTypes.BOOLEAN,
+    userEmail: DataTypes.STRING
   }, {});
   Facility.associate = function(models) {
     Facility.hasMany(models.Example, {as: 'example'});

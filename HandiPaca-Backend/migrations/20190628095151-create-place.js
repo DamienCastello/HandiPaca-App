@@ -34,7 +34,7 @@ module.exports = {
         references: {
           model: 'Categories',
           foreignKey: 'id'
-        }
+}
       },
       facilityId: {
         type: Sequelize.INTEGER
