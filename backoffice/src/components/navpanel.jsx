@@ -7,7 +7,7 @@ export default class NavPanel extends Component {
 			<div>
 				<div className="row small-spacing">
 					<div className="col-lg-3 col-md-6 col-xs-12">
-						<Card title="Places de parking Referencé" className="bg-success text-white" >
+						<Card title="Places GIG ReferencéEs" className="bg-success text-white" >
 							<i className="pi pi-fw pi-calendar" ></i> 	<h2>32</h2>
 						</Card>
 					</div>
@@ -17,12 +17,12 @@ export default class NavPanel extends Component {
 						</Card>
 					</div>
 					<div className="col-lg-3 col-md-6 col-xs-12">
-						<Card title="PARTICIPANTS" className="bg-danger text-white" >
+						<Card title="Utilisateurs" className="bg-danger text-white" >
 								<i className="pi pi-fw pi-users" ></i> 	<h2>140</h2>
 						</Card>
 					</div>
 					<div className="col-lg-3 col-md-6 col-xs-12">
-						<Card title="PHOTOS" className="bg-warning text-white" >
+						<Card title="Mairie" className="bg-warning text-white" >
 							<i className="pi pi-fw pi-users" ></i> 	<h2>637</h2>
 						</Card>
 					</div>

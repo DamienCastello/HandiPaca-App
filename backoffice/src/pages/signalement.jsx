@@ -61,7 +61,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
 
           <div className="content-section implementation">
             <TabView>
-              <TabPanel header="liste des emplacements Signalés">
+              <TabPanel header="Emplacements Signalés">
                 <div>
                   <Fieldset legend="En cours">
                     <p> </p>
@@ -81,7 +81,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
               </TabPanel>
 
 
-              <TabPanel header="Demande administration">
+              <TabPanel header="Emplacements Validés">
                 <div>
                   <Fieldset legend="En cours">
                   </Fieldset>
@@ -89,7 +89,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
               </TabPanel>
 
 
-              <TabPanel header="signalement > 6 mois">
+              <TabPanel header="Signalement > 6 mois">
                 <div>
                   <Fieldset legend="En cours">
             
@@ -97,7 +97,7 @@ Vous êtes en situation de handicap et aucune place de stationnement spécifique
                 </div>
               </TabPanel>
       
-              <TabPanel header="Demande Refusée">
+              <TabPanel header="Demandes Refusées">
                 <div>
                 <Fieldset legend="En cours">
                  </Fieldset>

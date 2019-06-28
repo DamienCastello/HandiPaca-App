@@ -18,7 +18,7 @@ import {Menu} from 'primereact/menu';
                     label: 'Categories',
                     items: [
                       
-                        {label: 'Places Handicapés', icon: 'pi pi-fw pi-user', url: './place'},
+                        {label: 'Places Handicapés', icon: 'pi pi-fw pi-tags', url: './place'},
                         {label: 'ERP', icon: 'pi pi-fw pi-user', url: './'},
                         {label: 'Transports', icon: 'pi pi-fw pi-user', url: './'},
                         {label: 'Intineraires accessibles', icon: 'pi pi-fw pi-user', url: './'},
