@@ -25,7 +25,7 @@ export default class Correspondant extends Component {
 
 
   componentDidMount() {
-    this.handiservice.getJson().then(datas => this.setState({ users: datas.docs }));
+    this.handiservice.getPlaces().then(datas => this.setState({ users: datas.docs }));
 
   }
 
@@ -68,7 +68,7 @@ export default class Correspondant extends Component {
                     <p>Fiche Update coiffeur, Lien vers Particpants, </p>
 
                     <DataTable value={this.state.users}>
-                    <Column field="NUM" header="N° " />
+                    <Column field="streetName" header="N° " />
                       <Column field="NOM_VOIE" header="Adresse " />
                    
                       <Column field="NB_PLACE" header="Nbre Place" />

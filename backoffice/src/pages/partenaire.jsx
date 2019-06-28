@@ -9,9 +9,6 @@ import {InputSwitch} from 'primereact/inputswitch';
 import {
   Link
 } from 'react-router-dom';
-
-
-
 export default class Partenaire extends Component {
   constructor() {
     super();
@@ -46,13 +43,8 @@ console.log('okkkkkkkkkkkkkkkkkkkkkkk'.data)
 <InputSwitch onLabel="Yes" />
     </div>;
   }
-
   render() {
-
     return (
-
-
-
       <React.Fragment>
 
           <div className="content-section introduction">
@@ -72,9 +64,7 @@ console.log('okkkkkkkkkkkkkkkkkkkkkkk'.data)
                     <DataTable value={this.state.users}>
                       <Column field="IDENT_NCA" header="Nom Prenom" />
                       <Column field="firstName" header="Administration" />
-                   
                       <Column field="email" header="mail" />
-                      
                       <Column field="suivi" header="ville" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
