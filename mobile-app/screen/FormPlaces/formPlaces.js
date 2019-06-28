@@ -4,7 +4,7 @@ import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class StackedLabelExample extends Component {
+export default class FormPlaces extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,7 +23,7 @@ export default class StackedLabelExample extends Component {
                     <Text  style={{fontSize: 25}}>Je voudrais ajouter un point !</Text>
                 </Header>
                 <Content>
-                    <Form>
+                    <Form style={{paddingBottom: 100}}>
                         <View style={{ justifyContent:'center', alignItems:'center', alignSelf:'center'}}>
                             <Text style={{fontSize: 20, marginBottom: 15, marginTop:15}}>Il s'agit de: </Text>
                             <Picker
@@ -60,11 +60,14 @@ export default class StackedLabelExample extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <View style={{text: 'center', marginTop:100}}>
-                        <Button rounded disabled block style={{width: '90%', alignSelf:'center'}}>
-                            <Text style={{color: 'white'}}>Ajouter mon point</Text>
-                        </Button>
-                    </View>
+                    <TouchableOpacity style={{...style.buttonAdd,backgroundColor:'#9DC2F8', width: '75%', alignSelf:'center', paddingTop: 20, borderWidth: 1,
+            borderColor: 'black',
+            borderStyle: 'solid',}}>
+                        <Text style={{alignSelf:'center', marginBottom:20, fontFamily:'Comfortaa',borderRadius:50}} >
+                            Ajouter mon point !
+                        </Text>
+                        
+                    </TouchableOpacity>
                     
                 </Content>
                 <Footer style={{paddingTop: 10, backgroundColor: '#9DC2F8'}}>
@@ -107,5 +110,8 @@ const style = StyleSheet.create({
         fontSize: 30,
         zIndex: 900,
         color: '#FDC500'
+    },
+    buttonAdd:{
+        borderRadius: 10,
     }
 })
