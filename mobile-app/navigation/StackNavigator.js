@@ -19,9 +19,6 @@ const AppStack = createStackNavigator(
     Description: {screen: Description},
     FormPlaces :{ screen: FormPlaces},
     FormAmenagement :{screen: FormAmenagement},
-    
-    
-    
   },
   {
     initialRouteName: 'Description',
@@ -35,8 +32,6 @@ const AuthStack = createStackNavigator(
     Description: {screen: Description},
     FormPlaces :{ screen: FormPlaces},
     FormAmenagement :{screen: FormAmenagement},
-    
-
   },
   {
     initialRouteName: 'Acceuil',

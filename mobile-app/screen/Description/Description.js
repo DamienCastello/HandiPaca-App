@@ -13,7 +13,6 @@ export default class aboutus extends Component {
                 <View>
                     <Text style={{ fontFamily: 'Comfortaa', textAlign: 'center', marginTop: 40, fontSize: 40 }}>A propos</Text>
                     <TouchableOpacity onPress={() => {
-                                           
                                            this.props.navigation.navigate('Acceuil')
                                        }}
                     style={{ flexDirection: 'row', justifyContent: 'center' }}>
