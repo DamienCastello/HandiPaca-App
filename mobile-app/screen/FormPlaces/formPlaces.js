@@ -4,7 +4,7 @@ import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class StackedLabelExample extends Component {
+export default class FormPlaces extends Component {
     constructor(props) {
         super(props);
         this.state = {

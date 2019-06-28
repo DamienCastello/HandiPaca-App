@@ -6,6 +6,8 @@ import stackConfig from './stackConfig';
 import MapHandi from '../screen/Map/map'
 import Acceuil from '../screen/Accueil/accueil'
 import Description from '../screen/Description/Description'
+import FormPlaces from '../screen/FormPlaces/formPlaces'
+import FormAmenagement from '../screen/FormAmenagements/formAmenagements'
 // Screens
 
 
@@ -14,7 +16,9 @@ const AppStack = createStackNavigator(
   {
     MapHandi:{screen:MapHandi},
     Acceuil :{screen: Acceuil},
-    Description: {screen: Description}
+    Description: {screen: Description},
+    FormPlaces :{ screen: FormPlaces},
+    FormAmenagement :{screen: FormAmenagement},
     
     
     
@@ -28,10 +32,14 @@ const AuthStack = createStackNavigator(
   {
     MapHandi:{screen:MapHandi},
     Acceuil :{screen: Acceuil},
-    Description: {screen: Description}
+    Description: {screen: Description},
+    FormPlaces :{ screen: FormPlaces},
+    FormAmenagement :{screen: FormAmenagement},
+    
+
   },
   {
-    initialRouteName: 'Acceuil',
+    initialRouteName: 'FormAmenagement',
     ...stackConfig
   }
 );
