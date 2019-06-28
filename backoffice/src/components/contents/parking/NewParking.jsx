@@ -69,9 +69,9 @@ export class NewParking extends Component {
 
     render() {
         const jobSelectItems = [
-            { label: 'Coiffeur', value: 'Coiffeur' },
-            { label: 'Estheticienne', value: 'Estheticienne' },
-            { label: 'Photographe', value: 'Photographe' }
+            { label: 'rampe', value: 'Coiffeur' },
+            { label: 'Ascenceur', value: 'Estheticienne' },
+            { label: 'Parking', value: 'Photographe' }
         ];
         console.log(this.state)
         return (
@@ -80,22 +80,15 @@ export class NewParking extends Component {
                     <Form onSubmit={this.submitForm} >
 
                         <div className="p-grid p-fluid">
+                       
                             <div className="p-col-4 p-md-4">
                                 <div className="p-inputgroup">
-                                    <span className="p-inputgroup-addon">
-                                        <i className="pi pi-user"></i>
-                                    </span>
-                                    <InputText placeholder="email" name="email" value={this.state.email} onChange={this.handleChange} />
+                                    <InputText placeholder="Adresse" name="password" type="text" onChange={this.handleChange} />
                                 </div>
                             </div>
                             <div className="p-col-4 p-md-4">
                                 <div className="p-inputgroup">
-                                    <InputText placeholder="Mot de passe" name="password" type="text" onChange={this.handleChange} />
-                                </div>
-                            </div>
-                            <div className="p-col-4 p-md-4">
-                                <div className="p-inputgroup">
-                                    <InputText placeholder="RE Mot de passe" name="password2" type="text" onChange={this.handleChange} />
+                                    <InputText placeholder="Adresse 2" name="password2" type="text" onChange={this.handleChange} />
                                 </div>
                             </div>
                         </div>
@@ -103,54 +96,36 @@ export class NewParking extends Component {
                         <div className="p-grid p-fluid">
                             <div className="p-col-4 p-md-4">
                                 <div className="p-inputgroup">
-                                    <InputText placeholder="Nom" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                                    <InputText placeholder="Code postal" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
                                 </div>
                             </div>
                             <div className="p-col-4 p-md-4">
                                 <div className="p-inputgroup">
-                                    <InputText placeholder="Prenom" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
+                                    <InputText placeholder="Ville" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
                                 </div>
                             </div>
                             <div className="p-col-4 p-md-4">
                                 <div className="p-inputgroup">
-                                    <Dropdown value={this.state.job} name="job" options={jobSelectItems} onChange={(e) => { this.setState({ job: e.value }) }} placeholder="Select a Job" />
+                                    <Dropdown value={this.state.job} name="job" options={jobSelectItems} onChange={(e) => { this.setState({ job: e.value }) }} placeholder="Selectionner une catégorie" />
                                 </div></div>
                         </div>
 
-                        <div className="p-grid p-fluid">
-                            <div className="p-col-4 p-md-4">
-                                <div className="p-inputgroup">
-                                    <InputText placeholder="Parrain" name="godFatherId" onChange={this.handleChange} />
-                                </div>
-                            </div>
-                            <div className="p-col-4 p-md-4">
-                                <div className="p-inputgroup">
-                                    <InputText placeholder="Code Filleul" value={this.state.invitationCode} name="invitationCode" onChange={this.handleChange} />
-                                </div>
-                            </div>
-                        </div>
+                      
 
                         <div className="p-grid p-fluid">
                             <div className="p-col-4 p-md-4">
-                                <p>isAdmin</p>
+                                <p>Archiver</p>
                                 <InputSwitch name="isAdmin" value={this.state.isAdmin} checked={this.state.isAdmin} onChange={(e) => this.setState({ isAdmin: e.target.value })} />
                             </div>
-                            <div className="p-col-4 p-md-4">
-                                <p>isActive</p>
-                                <InputSwitch name="isActive" value={this.state.isActive} checked={this.state.isActive} onChange={(e) => this.setState({ isActive: e.target.value })} />
-                            </div>
-                            <div className="p-col-4 p-md-4">
-                                <p>isBanned</p>
-                                <InputSwitch name="isBanned" value={this.state.isBanned} checked={this.state.isBanned} onChange={(e) => this.setState({ isBanned: e.target.value })} />
-                            </div>
+                      
                         </div>
-
 
 
 
                         <div className="p-grid p-fluid">
                             <div className="p-col-12 p-md-4" >
-                                <Button type="submit" value="Envoyer" >Submit</Button>
+                            <Button label="Soumettre la demande" icon="pi pi-times" className="p-button-warning" />
+                          
                             </div>
                         </div>
 

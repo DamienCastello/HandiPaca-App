@@ -9,8 +9,8 @@ import {Menu} from 'primereact/menu';
             items: [
                 {
                     label: 'GENERAL',
-                    items: [{label: 'Home', icon: 'pi pi-fw pi-home', url: './'},
-                    {label: 'Signalement', icon: 'pi pi-fw pi-calendar', url: './signalement'},
+                    items: [{label: 'Acceuil', icon: 'pi pi-fw pi-home', url: './'},
+                    {label: 'Signalements', icon: 'pi pi-fw pi-calendar', url: './signalement'},
                
                 ]
                 }, 
@@ -18,39 +18,36 @@ import {Menu} from 'primereact/menu';
                     label: 'Categories',
                     items: [
                       
-                        {label: 'Place Handicapé', icon: 'pi pi-fw pi-user', url: './place'},
+                        {label: 'Places Handicapés', icon: 'pi pi-fw pi-user', url: './place'},
                         {label: 'ERP', icon: 'pi pi-fw pi-user', url: './'},
-                        {label: 'Transport', icon: 'pi pi-fw pi-user', url: './'},
-                        {label: 'Intineraire', icon: 'pi pi-fw pi-user', url: './'},
+                        {label: 'Transports', icon: 'pi pi-fw pi-user', url: './'},
+                        {label: 'Intineraires accessibles', icon: 'pi pi-fw pi-user', url: './'},
                                          
                     ]
                 },
 
                 {
-                    label: 'Partenaire',
+                    label: 'Interlocuteurs',
                     items: [
-                        {label:'Association',icon:'pi pi-fw pi-filter',url: './partenaire'},
-                        {label:'Administration',icon:'pi pi-fw pi-user',url: './correspondant'},
-                        {label:'Membres',icon:'pi pi-fw pi-filter'},
+                        {label:'Associations',icon:'pi pi-fw pi-filter',url: './correspondant'},
+                        {label:'Administrations',icon:'pi pi-fw pi-user',url: './correspondant'},
+                   
                             ]
                 },
          
                 {
                     label: 'Autres',
-                    items: [{label: 'Pharmancies Numero UTILE', icon: 'pi pi-fw pi-cog',url: './configuration' },
-                            {label: 'Article de lois', icon: 'pi pi-fw pi-power-off', url: './index.html'},
-                            {label: 'Actualites', icon: 'pi pi-fw pi-power-off', url: './index.html'},
+                    items: [{label: 'Numeros utiles ', icon: 'pi pi-fw pi-cog',url: './configuration' },
+                            {label: 'Articles de loi', icon: 'pi pi-fw pi-power-off', url: './index.html'},
+                          
                         ]
                 },
 
-                {
-                    label: 'Api',
-                    items: [{label: 'Documentation', icon: 'pi pi-fw pi-file', url: './api'}
-                      ]
-                },
+             
                 {
                     label: 'Account',
                     items: [{label: 'Configuration', icon: 'pi pi-fw pi-cog',url: './configuration' },
+                    {label:'Utilisateurs',icon:'pi pi-fw pi-filter', url: '/partenaire'},
                             {label: 'Sign Out', icon: 'pi pi-fw pi-power-off', url: './index.html'} ]
                 }
             ]

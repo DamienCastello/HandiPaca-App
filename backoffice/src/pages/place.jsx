@@ -4,6 +4,7 @@ import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Fieldset } from 'primereact/fieldset';
+import axios from 'axios';
 
 import { HandiService } from '../components/HandiService';
 import {InputSwitch} from 'primereact/inputswitch';
@@ -18,35 +19,48 @@ export default class Correspondant extends Component {
   constructor() {
     super();
     this.state = {
-   
+   users:[]
     };
     this.handiservice = new HandiService();
   }
 
 
   componentDidMount() {
-    this.handiservice.getPlaces().then(datas => this.setState({ users: datas.docs }));
+   // this.handiservice.getPlaces().then(datas => this.setState({ users: datas }));
+    // this.handiservice.getPlaces();
+    this.getPlaces();
 
   }
 
+  getPlaces() {
+    axios
+    .get('http://127.0.0.1:3000/api/v1/places')
+
+    .then(response => {
+      console.log(response);
+      this.setState({
+        users:response.data.places
+      });
+      
+    })
+    .catch(error => this.setState({ error }));
+  }
+
+
+
   actionTemplate(rowData, column) {
     return <div>
-      <Button type="button" icon="pi pi-search" className="p-button-success" style={{ marginRight: '.5em' }}></Button>
+      <Button type="button" icon="pi pi-envelope" className="p-button-success" style={{ marginRight: '.5em' }}></Button>
 
     <Link to={'/newusager/'}><Button type="button" icon="pi pi-pencil" className="p-button-warning" style={{ marginRight: '.5em' }}></Button></Link>
       <Button type="button" icon="pi pi-times" className="p-button-danger"></Button>
     </div>;
   }
 
-  actionValid(rowData, column) {
-    return <div>
 
-<InputSwitch onLabel="Yes" />
-    </div>;
-  }
 
   render() {
-
+    console.log(this.state.users);
     return (
 
   
@@ -62,19 +76,19 @@ export default class Correspondant extends Component {
 
           <div className="content-section implementation">
             <TabView>
-              <TabPanel header="liste des places existantes">
+              <TabPanel header="Liste des places existantes">
                 <div>
                   <Fieldset legend="En cours">
-                    <p>Fiche Update coiffeur, Lien vers Particpants, </p>
+                    <p> </p>
 
                     <DataTable value={this.state.users}>
-                    <Column field="streetName" header="N° " />
-                      <Column field="NOM_VOIE" header="Adresse " />
-                   
-                      <Column field="NB_PLACE" header="Nbre Place" />
-                      <Column field="CONFORMITE" header="Conformité" />
+                    <Column field="id" header="N° " />
+                      <Column field="streetName" header="Adresse " />
+                      <Column field="postalCode" header="Code postal " />
+                      <Column field="city" header="Ville" />
+                      <Column field="numberOfPlaces" header="Nbre Places" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
-                      <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
+               
                     </DataTable>
 
                   </Fieldset>
@@ -84,7 +98,7 @@ export default class Correspondant extends Component {
 
               <TabPanel header="Ajouter un emplacement GIG-GIC">
                 <div>
-                  <Fieldset legend="Ajouter">
+                  <Fieldset legend="Remplir les champs">
 <NewParking />
                   </Fieldset>
                 </div>
