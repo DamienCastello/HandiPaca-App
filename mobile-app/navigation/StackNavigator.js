@@ -39,7 +39,7 @@ const AuthStack = createStackNavigator(
 
   },
   {
-    initialRouteName: 'MapHandi',
+    initialRouteName: 'Acceuil',
     ...stackConfig
   }
 );
