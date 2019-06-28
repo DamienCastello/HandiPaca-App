@@ -55,11 +55,8 @@ export default class Correspondant extends Component {
 
           <div className="content-section introduction">
             <div className="feature-intro">
-              <h1>Différents types de partenaires</h1>
-              <p>Les structures souhaitant pérenniser leurs activités d’utilité sociale se dirigent 
-souvent en premier lieu vers les partenaires publics (Europe, État, établissements publics, collectivités territoriales) 
-afin d’obtenir des subventions. Celles-ci ne sont pas un dû et ne sont pas automatiques. Ainsi, les structures ont 
-tout intérêt à diversifier leurs sources de financements pour préserver leur autonomie et développer plus sûrement leurs projets.</p>
+              <h1>Liste des interlocuteurs de proximité</h1>
+              <p></p>
             </div>
           </div>
 
@@ -73,12 +70,11 @@ tout intérêt à diversifier leurs sources de financements pour préserver leur
 
 
                     <DataTable value={this.state.users}>
-                      <Column field="metas.publisher" header="Nom Prenom" />
-                      <Column field="metas.theme" header="Administration" />
+                      <Column field="metas.publisher" header="Nom" />
+                      <Column field="metas.theme" header="Domaine" />
                    
-                      <Column field="metas.keyword" header="mail" />
+                      <Column field="metas.keyword" header="Description" />
                       
-                      <Column field="" header="ville" />
                       <Column body={this.actionTemplate} style={{ textAlign: 'center', width: '12em' }}  header="action" />
                       <Column body={this.actionValid} style={{ textAlign: 'center', width: '5em' }}  header="actif"/>
                     </DataTable>

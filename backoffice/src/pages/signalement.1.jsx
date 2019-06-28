@@ -9,11 +9,10 @@ import {InputSwitch} from 'primereact/inputswitch';
 import {
   Link
 } from 'react-router-dom';
-import { NewParking } from '../components/contents/parking/NewParking';
 
 
 
-export default class Place extends Component {
+export default class Signalement extends Component {
   constructor() {
     super();
     this.state = {
@@ -53,8 +52,10 @@ export default class Place extends Component {
       <React.Fragment>
         <div className="content-section introduction">
             <div className="feature-intro">
-              <h1>Liste des places de stationnement handicapés</h1>
-              <p></p>
+              <h1>Demande d'une place de stationnement </h1>
+              <p>Une place de stationnement pour personne handicapée ou à mobilité réduite est une place de stationnement répondant à des caractéristiques techniques facilitant l’accessibilité de la voirie et des espaces publics à toute personne en situation de handicap.
+
+Vous êtes en situation de handicap et aucune place de stationnement spécifique n’est prévue à proximité de votre domicile ? Nous vous indiquons la démarche à effectuer pour demander la création d’une place de stationnement au maire de votre commune.</p>
             </div>
           </div>
 
@@ -80,47 +81,29 @@ export default class Place extends Component {
               </TabPanel>
 
 
-
-
-
-              <TabPanel header="Ajouter un emplacement GIG-GIC">
+              <TabPanel header="Emplacements Validés">
                 <div>
-                  <Fieldset legend="Remplir les champs">
-<NewParking />
+                  <Fieldset legend="En cours">
                   </Fieldset>
                 </div>
               </TabPanel>
 
-              <TabPanel header="Modifier emplacement GIG-GIC">
-                <div>
-                  <Fieldset legend="Remplir les champs">
 
-                  <NewParking />
+              <TabPanel header="Signalement > 6 mois">
+                <div>
+                  <Fieldset legend="En cours">
+            
                   </Fieldset>
                 </div>
               </TabPanel>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
+              <TabPanel header="Demandes Refusées">
+                <div>
+                <Fieldset legend="En cours">
+                 </Fieldset>
+                </div>
+              </TabPanel>
+      
     
 
 
