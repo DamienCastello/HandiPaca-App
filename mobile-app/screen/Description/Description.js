@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
 import { Image, Text, View } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class aboutus extends Component {
+    static navigationOptions = {
+        title: "",
+        headerLeft: null
+    }
     render() {
         return (
             <ScrollView>
                 <View>
                     <Text style={{ fontFamily: 'Comfortaa', textAlign: 'center', marginTop: 40, fontSize: 40 }}>A propos</Text>
-                    <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+                    <TouchableOpacity onPress={() => {
+                                           
+                                           this.props.navigation.navigate('Acceuil')
+                                       }}
+                    style={{ flexDirection: 'row', justifyContent: 'center' }}>
                         <Image style={{ resizeMode: 'contain', height: 100, width: 100, marginTop: 55 }} source={require('../../assets/Ping.png')} />
-                    </View>
+                    </TouchableOpacity>
                     <Text style={{ fontFamily: 'Comfortaa', textAlign: 'center', marginTop: 40, fontSize: 20, paddingHorizontal: 25 }}>
                         Réalisée lors du hackaton de la DataWeek 2019, l’application mobile HandiPaca a pour objectif de faciliter l’accessibilité des milieux urbains de la région Paca, nouvellement appelée Région Sud, aux personnes à mobilité réduite (handicaps moteurs, difficultés liées à l’âge, mais également les difficultés liées à la grossesse ou à l’utilisation de poussettes…).
                     {"\n"}

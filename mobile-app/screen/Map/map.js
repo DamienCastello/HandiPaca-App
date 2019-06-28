@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import MapView from 'react-native-maps';
+import FooterMap from '../../Components/footerMap'
 
 
 
@@ -18,7 +19,8 @@ export default class MapHandi extends Component {
         console.log(datas)
     }
     static navigationOptions = {
-        title: ""
+        title: "",
+        headerLeft: null
     }
 
     render() {
@@ -52,6 +54,7 @@ export default class MapHandi extends Component {
                         })
                     }
                 </MapView>
+            <FooterMap style ={{flex: 2}}/>
             </View>
         )
     }
