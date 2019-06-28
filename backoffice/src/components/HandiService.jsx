@@ -29,7 +29,7 @@ export class HandiService {
       return await data
    
   }
-
+  
 
  
  getAddress (id) {

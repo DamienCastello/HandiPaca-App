@@ -1,74 +1,147 @@
 import React from 'react';
+
 import {Menu} from 'primereact/menu';
 
 
+
+
+
   export default class MenuLeft extends React.Component {
+
  constructor() {
+
         super();
+
         this.state = {
+
             items: [
-                {
-                    label: 'GENERAL',
-                    items: [{label: 'Acceuil', icon: 'pi pi-fw pi-home', url: './'},
-                    {label: 'Signalements', icon: 'pi pi-fw pi-calendar', url: './signalement'},
-               
-                ]
-                }, 
-                {
-                    label: 'Categories',
-                    items: [
-                      
-                        {label: 'Places Handicapés', icon: 'pi pi-fw pi-tags', url: './place'},
-                        {label: 'ERP', icon: 'pi pi-fw pi-user', url: './'},
-                        {label: 'Transports', icon: 'pi pi-fw pi-user', url: './'},
-                        {label: 'Intineraires accessibles', icon: 'pi pi-fw pi-user', url: './'},
-                                         
-                    ]
-                },
 
                 {
-                    label: 'Interlocuteurs',
-                    items: [
-                        {label:'Associations',icon:'pi pi-fw pi-filter',url: './correspondant'},
-                        {label:'Administrations',icon:'pi pi-fw pi-user',url: './correspondant'},
-                   
-                            ]
-                },
-         
+
+                    label: 'GENERAL',
+
+                    items: [{label: 'Accueil', icon: 'pi pi-fw pi-home', url: './'},
+
+                    {label: 'Signalements', icon: 'pi pi-fw pi-calendar', url: './signalement'},
+
+               
+
+                ]
+
+                }, 
+
                 {
-                    label: 'Autres',
-                    items: [{label: 'Numeros utiles ', icon: 'pi pi-fw pi-cog',url: './configuration' },
-                            {label: 'Articles de loi', icon: 'pi pi-fw pi-power-off', url: './index.html'},
-                          
-                        ]
+
+                    label: 'Catégories',
+
+                    items: [
+
+                      
+
+                        {label: 'Places Handicapés', icon: 'pi pi-fw pi-chevron-circle-right', url: './place'},
+
+                        {label: 'ERP', icon: 'pi pi-fw pi-chevron-circle-right'},
+
+                        {label: 'Transports', icon: 'pi pi-fw pi-chevron-circle-right'},
+
+                        {label: 'Itinéraires accessibles', icon: 'pi pi-fw pi-chevron-circle-right'},
+
+                                         
+
+                    ]
+
                 },
+
+
+
+                {
+
+                    label: 'Interlocuteurs',
+
+                    items: [
+
+                        {label:'Associations',icon:'pi pi-fw pi-chevron-circle-right',url: './correspondant'},
+
+                        {label:'Administrations',icon:'pi pi-fw pi-chevron-circle-right'},
+
+                   
+
+                            ]
+
+                },
+
+         
+
+                {
+
+                    label: 'Autres',
+
+                    items: [{label: 'Numéros utiles ', icon: 'pi pi-fw pi-info-circle' },
+
+                            {label: 'Articles de loi', icon: 'pi pi-fw pi-pencil'},
+
+                          
+
+                        ]
+
+                },
+
+
 
              
+
                 {
+
                     label: 'Account',
-                    items: [{label: 'Configuration', icon: 'pi pi-fw pi-cog',url: './configuration' },
-                    {label:'Utilisateurs',icon:'pi pi-fw pi-filter', url: '/partenaire'},
-                            {label: 'Sign Out', icon: 'pi pi-fw pi-power-off', url: './index.html'} ]
+
+                    items: [{label: 'Configuration', icon: 'pi pi-fw pi-cog' },
+
+                    {label:'Utilisateurs',icon:'pi pi-fw pi-user'},
+
+                            {label: 'Sign Out', icon: 'pi pi-fw pi-sign-out'} ]
+
                 }
+
             ]
+
         };
+
     }
+
+
 
     render() {
+
         return (
 
+
+
             
+
      
 
+
+
                 <div className="layout-menu">
+
                 
+
                     <Menu model={this.state.items}/>
 
+
+
                     
+
                 </div>
 
+
+
                 
+
        
+
         )
+
     }
+
 }
