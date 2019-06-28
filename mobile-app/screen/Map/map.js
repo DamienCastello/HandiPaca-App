@@ -2,16 +2,7 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import MapView from 'react-native-maps';
 
-
-
 const datas = require('../../Files/Data.json');
-
-
-
-
-
-
-
 
 export default class MapHandi extends Component {
     componentDidMount() {
