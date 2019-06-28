@@ -3,9 +3,9 @@ import { createSwitchNavigator, createStackNavigator, createAppContainer } from 
 
 // Used to display custom header on each screens
 import stackConfig from './stackConfig';
-import MapHandi from '../screen/Map/map';
-import Acceuil from '../screen/Accueil/accueil';
-import FormPlaces from '../screen/FormPlaces/formPlaces';
+import MapHandi from '../screen/Map/map'
+import Acceuil from '../screen/Accueil/accueil'
+import Description from '../screen/Description/Description'
 // Screens
 
 
@@ -13,21 +13,25 @@ import FormPlaces from '../screen/FormPlaces/formPlaces';
 const AppStack = createStackNavigator(
   {
     MapHandi:{screen:MapHandi},
-    Acceuil :{screen: Acceuil}
+    Acceuil :{screen: Acceuil},
+    Description: {screen: Description}
+    
+    
+    
   },
   {
-    initialRouteName: 'Acceuil',
+    initialRouteName: 'Description',
     ...stackConfig
   }
 );
 const AuthStack = createStackNavigator(
   {
-    MapHandi:{ screen:MapHandi },
-    Acceuil :{ screen: Acceuil },
-    FormPlaces: { screen: FormPlaces }
+    MapHandi:{screen:MapHandi},
+    Acceuil :{screen: Acceuil},
+    Description: {screen: Description}
   },
   {
-    initialRouteName: 'FormPlaces',
+    initialRouteName: 'Acceuil',
     ...stackConfig
   }
 );
